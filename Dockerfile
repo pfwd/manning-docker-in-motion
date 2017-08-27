@@ -1,7 +1,6 @@
 FROM ubuntu:16.10
 
 LABEL maintainer "Peter Fisher"
-LABEL image_type "Nginx Webserver with PHP"
 
 ARG JQUERY_VERSION=3.2.0
 
