@@ -17,5 +17,7 @@ RUN apt-get update \
 
 WORKDIR ${DOC_ROOT}
 
+USER www-data:www-data
+
 COPY code/sites/mysite .
 ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
