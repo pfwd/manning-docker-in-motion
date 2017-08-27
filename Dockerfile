@@ -15,5 +15,7 @@ RUN apt-get update \
     php7.0 \
     && rm -rf /var/lib/apt/lists/*
 
-COPY code/sites/mysite ${DOC_ROOT}
-ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js ${DOC_ROOT}/js/
+WORKDIR ${DOC_ROOT}
+
+COPY code/sites/mysite .
+ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
