@@ -19,8 +19,6 @@ WORKDIR ${DOC_ROOT}
 COPY code/sites/mysite .
 
 ADD code/apache/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
-
-
 ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
 
 EXPOSE 80
