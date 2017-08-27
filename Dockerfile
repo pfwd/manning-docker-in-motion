@@ -21,3 +21,5 @@ USER www-data:www-data
 
 COPY code/sites/mysite .
 ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
+
+EXPOSE 80 443
