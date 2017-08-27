@@ -1,0 +1,1 @@
+# manning-docker-in-motion
