@@ -6,7 +6,7 @@ require_once 'model/Person.php';
 require_once 'modelRepo/personRepo.php';
 
 // Make a connection
-$db = dbConnect(DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST);
+$db = dbConnect(DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST, DB_PORT);
 
 // Delete record
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
@@ -113,7 +113,7 @@ $result = dbPersonFindAll($db);
                         else:
                             ?>
                             <tr>
-                                <td colspan="5">
+                                <td colspan="6">
                                     No records found
                                 </td>
                             </tr>

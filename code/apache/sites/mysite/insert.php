@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 
     if($isValid){
         // Make a connection
-        $db = dbConnect(DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST);
+        $db = dbConnect(DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST, DB_PORT);
         $person = new Person();
         $person->setAge($age)
             ->setFirstName($firstName)

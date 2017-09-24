@@ -12,13 +12,14 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \
     php7.0 \
+    php7.0-mysql \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR ${DOC_ROOT}
 
-COPY code/sites/mysite .
+COPY sites/mysite .
 
-ADD code/apache/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
+ADD config/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
 ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
 
 EXPOSE 80
