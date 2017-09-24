@@ -1,27 +1,56 @@
 <?php
+session_start();
 require_once 'config/dbConnect.php';
 require_once 'model/Person.php';
 require_once 'modelRepo/personRepo.php';
 
-// Make a connection
-//$db = dbConnect(DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST);
 
-//// Get the list of results
-//$result = dbPersonFindAll($db);
 $errors = [];
 if(isset($_POST['submit'])){
 
-    if(empty($_POST['first_name'])){
+    $isValid = false;
+    $firstName = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
+    if(empty($firstName)){
         $errors['first_name'] = 'Please enter a first name';
     }
 
-    if(empty($_POST['last_name'])){
+    $lastName = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
+    if(empty($lastName)){
         $errors['last_name'] = 'Please enter a last name';
     }
-    if(empty($_POST['age'])){
-        $errors['age'] = 'Please enter an age';
+
+    $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_NUMBER_INT);
+    if(empty($lastName)){
+        $errors['age'] = 'Please enter age';
     }
+
+    $description = filter_input(INPUT_POST, 'description');
+
+    if(count($errors) < 1){
+        $isValid = true;
+    }
+
+    if($isValid){
+        // Make a connection
+        $db = dbConnect(DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST);
+        $person = new Person();
+        $person->setAge($age)
+            ->setFirstName($firstName)
+            ->setLastName($lastName)
+            ->setDescription($description)
+            ;
+
+        $person = dbPersonInsert($db, $person);
+        if($person instanceof Person){
+            $_SESSION['alert_message'] = 'Message saved';
+            $_SESSION['alert_status'] = 'success';
+            header("Location: /index.php");
+            exit;
+        }
+    }
+
 }
+
 ?>
 <html>
 <head>
@@ -49,7 +78,7 @@ if(isset($_POST['submit'])){
         <section id="main-content" class="col _55">
             <div class="row">
                 <h1 class="col _55">Insert a person</h1>
-                <a href="/list.php" class="col btn btn-right">View List</a>
+                <a href="/" class="col btn btn-right">View List</a>
             </div>
 
 
@@ -68,17 +97,17 @@ if(isset($_POST['submit'])){
                     <?php endif; ?>
                     <div class="row input-row">
                         <label for="first_name" class="col">First Name</label>
-                        <input type="text" nme="first_name" class="col _25 <?php echo (isset($errors['first_name'])) ? 'error' : ''; ?> " />
+                        <input type="text" name="first_name" class="col _25 <?php echo (isset($errors['first_name'])) ? 'error' : ''; ?> " />
                     </div>
 
                     <div class="row input-row">
                         <label for="last_name" class="col">Last Name</label>
-                        <input type="text" nme="last_name"  class="col _25 <?php echo (isset($errors['last_name'])) ? 'error': ''; ?> "/>
+                        <input type="text" name="last_name"  class="col _25 <?php echo (isset($errors['last_name'])) ? 'error': ''; ?> "/>
                     </div>
 
                     <div class="row input-row">
                         <label for="age" class="col">Age</label>
-                        <input type="number" nme="age" class="col _25 <?php echo (isset($errors['age'])) ? 'error': ''; ?> " />
+                        <input type="number" name="age" class="col _25 <?php echo (isset($errors['age'])) ? 'error': ''; ?> " />
                     </div>
                     <div class="row input-row">
                         <label for="age" class="col">Description</label>

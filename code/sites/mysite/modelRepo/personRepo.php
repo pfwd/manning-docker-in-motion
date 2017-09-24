@@ -62,3 +62,21 @@ function dbPersonFindAll($db){
     return $data;
 
 }
+
+
+/**
+ * Deletes a person record
+ * @param $db mysqli
+ * @param $id int
+ * @return array Array of results
+ */
+function dbPersonDelete($db, $id){
+
+
+    $sql = "DELETE FROM `person` WHERE id ='". $id ."';";
+
+    $result =  $db->query($sql);
+
+    return $result;
+
+}

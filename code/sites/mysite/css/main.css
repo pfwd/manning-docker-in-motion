@@ -67,7 +67,10 @@ tr:nth-child(even) td{
     text-decoration: none;
     text-align: center;
     border:1px solid #fff;
-
+}
+.btn-delete{
+    background-color:#999;
+    color:#000;
 }
 .btn-right{
     float:right;
@@ -102,11 +105,27 @@ input, textarea{
     padding:10px;
     border:1px solid #85C1E9;
 }
+
+.alert-box{
+    padding: 10px;
+    margin-bottom:10px;
+}
 .error, .alert-box{
-    border:1px solid red;
-    background-color:lightcoral;
     color:#FFF;
 }
+
+.alert-error{
+    border:1px solid red;
+    background-color:lightcoral;
+    margin-top:10px;
+}
+
+.alert-success{
+    border:1px solid green;
+    background-color:lightgreen;
+    color:#000;
+}
+
 textarea{
     height:200px;
 }
@@ -117,11 +136,7 @@ label{
     display:block;
     width:50%;
 }
-.alert-box{
-    padding: 10px;
-    margin-bottom:10px;
-    margin-top:10px;
-}
+
 fieldset{
     margin-top:10px;
     border:1px solid #85C1E9;
