@@ -45,7 +45,7 @@ $ docker build -t webserver .
 
 ## Database images
 
-Database server images can be found on the [Docker hub](https://hub.docker.com/r/howtocodewell/manning-database-01/tags/)
+Database server images can be found on the [Docker hub](https://hub.docker.com/r/howtocodewell/manning-database-server-01/tags/)
 
 You can either pull the Docker image or build it
 
