@@ -14,6 +14,11 @@ Welcome to the Github repository for [Docker in Motion](http://bit.ly/2vvz2sA)
   -  [Build the database container](#build-the-database-container)
   -  [Run the database container](#run-the-database-container)
   -  [Rebuild the database](#rebuild-the-database)
+- [Docker compose](#docker-compose)
+  -  [Start the containers](#start-the-containers)
+  -  [Tear down the containers](#tear-down-the-containers)
+  -  [Run the database container](#run-the-database-container)
+  -  [Pull image updates](#pull-image-updates)
 
 ## Web server images
 
@@ -50,11 +55,11 @@ $ cd code/mysql/
 $ docker build -t mysql-server . 
  ```
 
-## Run the database container
+### Run the database container
 
 ```$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=<password>  -d mysql-server ```
 
-## Rebuild the database
+### Rebuild the database
 
 Log into the MYSQL container
 
@@ -65,3 +70,19 @@ Enter password
 Run the rebuild script from within the container
 
 ```mysql> source /schemas/rebuild.sql```
+
+## Docker Compose
+
+ TODO
+ 
+### Start the containers
+ 
+  TODO
+  
+### Tear down the containers
+ 
+  TODO
+  
+### Pull image updates
+ 
+  TODO
