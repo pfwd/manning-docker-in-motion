@@ -3,6 +3,9 @@
 
 Welcome to the Github repository for [Docker in Motion]('https://livevideo.manning.com')
 
+- [Get the course]('http://bit.ly/2vvz2sA')
+- [Watch how this was made]('https://www.youtube.com/watch?v=ldhZuwkJME0&list=PLZdsdjcJ44WW7BRBe6C0VhRJZO-dow-Pw&index=5')
+- [Subscribe to HowToCodeWell YouTube channel]('http://bit.ly/2wf9ufB')
 - [Web server images](#web-server-images)
   -  [Pull the web server image](#pull-the-web-server-image)
   -  [Build the web server image](#build-the-web-server-image)
