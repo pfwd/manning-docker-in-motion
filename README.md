@@ -3,14 +3,14 @@
 
 Welcome to the Github repository for [Docker in Motion]('https://livevideo.manning.com')
 
-- [Web server images]('#Web-server-images')
-  -  [Pull the web server image]('#Pull-the-web-server-image')
-  -  [Build the web server image]('#Build-the-web-server-image')
-- [Database images]('#Database-images')
-  -  [Pull a database server image]('#Pull-a-database-server-image')
-  -  [Build the database container]('#Build-the-database-container')
-  -  [Run the database container]('#Run-the-database-container')
-  -  [Rebuild the database]('#Rebuild-the-database')
+- [Web server images](#web-server-images)
+  -  [Pull the web server image](#pull-the-web-server-image)
+  -  [Build the web server image](#build-the-web-server-image)
+- [Database images](#database-images)
+  -  [Pull a database server image](#pull-a-database-server-image)
+  -  [Build the database container](#build-the-database-container)
+  -  [Run the database container](#run-the-database-container)
+  -  [Rebuild the database](#rebuild-the-database)
 
 ## Web server images
 
