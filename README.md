@@ -3,6 +3,11 @@
 
 Welcome to the Github repository for [Docker in Motion](http://bit.ly/2vvz2sA)
 
+Docker in Motion teaches you how to create and manage container-hosted applications in Docker. 
+With over 2 hours of hands-on, practical video lessons, you'll learn the ins and outs of Docker and discover how to apply what you've learned to your own day-to-day development. 
+
+Starting with an overview of Docker, you'll dive into the commands and techniques you'll need for running and managing containers, creating, modifying, saving and uploading Docker images from scratch, running and building multiple containers with Docker Compose, and more.
+
 - [Get the course](http://bit.ly/2vvz2sA)
 - [Watch how this was made](https://www.youtube.com/watch?v=ldhZuwkJME0&list=PLZdsdjcJ44WW7BRBe6C0VhRJZO-dow-Pw&index=5)
 - [Subscribe to HowToCodeWell YouTube channel](http://bit.ly/2wf9ufB)
