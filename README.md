@@ -77,17 +77,15 @@ Run the rebuild script from within the container
 ```mysql> source /schemas/rebuild.sql```
 
 ## Docker Compose
-
- TODO
  
 ### Start the containers
- 
-  TODO
+
+  ````$ docker-compose up -d````
   
 ### Tear down the containers
  
-  TODO
+  ````$ docker-compose down````s
   
-### Pull image updates
+### Build the images
  
-  TODO
+  ```$ docker-compose build```
