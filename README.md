@@ -84,8 +84,8 @@ Run the rebuild script from within the container
   
 ### Tear down the containers
  
-  ````$ docker-compose down````
+  ````$ docker-compose down````s
   
 ### Build the images
  
-  ``$ docker-compose build```
+  ```$ docker-compose build```
