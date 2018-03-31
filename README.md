@@ -79,13 +79,13 @@ Run the rebuild script from within the container
 ## Docker Compose
  
 ### Start the containers
- 
-  ``$ docker-compose up -d``
+
+  ````$ docker-compose up -d````
   
 ### Tear down the containers
  
-  ``$ docker-compose down``
+  ````$ docker-compose down````
   
 ### Build the images
  
-  ``$ docker-compose build``
+  ``$ docker-compose build```
