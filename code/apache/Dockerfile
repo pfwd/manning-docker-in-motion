@@ -1,4 +1,4 @@
-FROM ubuntu:16.10
+FROM ubuntu:16.04
 
 LABEL maintainer "Peter Fisher"
 LABEL image_type "Apache Webserver with PHP"
@@ -11,6 +11,8 @@ ENV JQUERY_VERSION ${JQUERY_VERSION}
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \
+    apache2 \
+    libapache2-mod-php \
     php7.0 \
     php7.0-mysql \
     && rm -rf /var/lib/apt/lists/*
