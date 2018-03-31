@@ -4,7 +4,7 @@ services:
   apache:
     build: apache
     ports:
-      - 80:80
+      - 8080:80
     links:
       - mysql
 
@@ -12,3 +12,9 @@ services:
     build: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=docker_in_motion
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
