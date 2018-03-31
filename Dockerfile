@@ -1,4 +1,4 @@
-FROM ubuntu:16.10
+FROM ubuntu:16.04
 
 LABEL maintainer "Peter Fisher"
 LABEL image_type "Nginx Webserver with PHP"
