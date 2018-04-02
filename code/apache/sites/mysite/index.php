@@ -22,7 +22,6 @@ if($id){
 $result = dbPersonFindAll($db);
 
 $showMarketing = getenv('marketing');
-$showMarketing = true;
 
 ?>
 <html>
