@@ -2,7 +2,7 @@ body{
     font-size:16px;
     line-height:1.3;
     font-family: sans-serif;
-    margin:10px;
+    margin:0;
     padding:0;
 }
 button{
@@ -185,4 +185,147 @@ fieldset{
         margin-top:0;
     }
 
+}
+
+/* Marketing */
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+#overlay-content{
+    width:840px;
+    height:480px;
+    padding:20px;
+    margin-top:100px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #262626;
+    border:1px solid #F2F2F2;
+    border-radius: 20px;
+    color:#FFF;
+    font-family: "Verdana, Geneva", sans-serif;
+    font-size:1.1em;
+    line-height:1.2em;
+}
+#overlay-content a{
+    text-decoration: none;
+}
+#overlay-content p{
+    margin-top:20px;
+}
+#overlay-content .copy{
+    float:left;
+    width:410px;
+    margin-right:20px;
+}
+#overlay-content .copy ul{
+    list-style: square;
+    margin-left:20px;
+}
+#overlay-content .copy p:first-child{
+    padding-top:0;
+    margin-top:0;
+}
+#overlay-content .img-thumb{
+    float:left;
+    width:410px;
+}
+#overlay-content .img-thumb p{
+    text-align: center;
+    font-size:1.3em;
+}
+#overlay-content .img-thumb strong,
+#marketing-header strong{
+    color:#ffff00;
+}
+#overlay-content .close{
+    float:right;
+    color:#FFF;
+}
+#overlay-content h1{
+    margin:0;
+}
+#overlay-content .iframe-container{
+    margin-top:20px;
+    margin-bottom: 3px;
+}
+#overlay-content .btn-row{
+    margin-top:50px;
+    width:100%;
+    height:100%;
+    text-align:center;
+
+}
+#overlay-content .btn,
+#marketing-header .btn{
+    padding:20px;
+    background-color:#47bd30;
+    color:#FFF;
+    border-radius: 6px;
+    font-size:1.22em;
+    width:250px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#overlay-content .btn:hover,
+#marketing-header .btn:hover{
+    background-color:#66dd66;
+    color:#000;
+}
+#overlay-content .close{
+    padding:10px;
+    background-color:#6E6E6E;
+    color:#CCC;
+    border-radius: 6px;
+}
+#overlay-content .close:hover{
+    background-color:#CCC;
+    color:#6E6E6E;
+}
+#marketing-header{
+    width:100%;
+    background-color: #262626;
+    border:1px solid #F2F2F2;
+    padding:10px;
+    color:#EAF2F8;
+    float:left;
+    border-bottom:2px solid #CCC;
+    margin-bottom:50px;
+}
+#marketing-header .copy h2{
+    margin:0;
+    font-size:1.2em;
+}
+#marketing-header .copy{
+    float:left;
+}
+#marketing-header .btn-row{
+    float:right;
+    margin-right:50px;
+    text-align: center;
+}
+#marketing-header .btn-row p{
+    margin-top:20px;
+}
+
+#marketing-header .btn{
+    padding:10px;
+    font-size: 1em;
+    width:200px;
+    float:left;
+    text-align: center;
+    margin-left:20px;
+}
+#marketing-header a{
+    color:#FFF;
+    text-decoration: none;
 }
