@@ -21,10 +21,14 @@ if($id){
 // Get the list of results
 $result = dbPersonFindAll($db);
 
+$showMarketing = getenv('marketing');
+$showMarketing = true;
+
 ?>
 <html>
     <head>
         <title>Docker In Motion - Peter Fisher | List of records</title>
+        <?php require_once 'templates/meta/meta.php'; ?>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <script type="text/javascript">
             function deleteRecord(){
@@ -38,7 +42,13 @@ $result = dbPersonFindAll($db);
         </script>
     </head>
     <body>
+    <?php
+    if ($showMarketing):
+        require_once 'templates/marketing/header.php';
+    endif;
+    ?>
     <div id="container">
+
         <header id="container-head">
             <h1>Docker In Motion</h1>
             <p>By <a href="http://peterfisher.me.uk">Peter Fisher</a</p>
@@ -127,5 +137,11 @@ $result = dbPersonFindAll($db);
         <hr />
         <p><a href="http://bit.ly/2vvz2sA">Docker In Motion</a> by <a href="http://peterfisher.me.uk">Peter Fisher</a></p>
     </div>
+
+    <?php
+    if ($showMarketing):
+        require_once 'templates/marketing/overlay.php';
+    endif;
+    ?>
     </body>
 </html>
