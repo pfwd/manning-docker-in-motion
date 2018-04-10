@@ -11,7 +11,8 @@
         </div>
         <div class="copy">
             <p>With over 2 hours of hands-on, practical video lessons, you'll learn the ins and outs of Docker and discover how to apply what you've learned to your own day-to-day development. </p>
-            </p>
+        </div>
+        <div class="hide-mobile what-you-will-learn">
             <h2>What you will learn</h2>
             <ul>
                 <li>An introduction to Docker and how it works</li>
@@ -24,10 +25,11 @@
                 <li>Configuring containers using docker-compose</li>
             </ul>
         </div>
-        <div class="img-thumb">
+
             <div class="iframe-container">
-                <iframe width="410" height="225" src="https://www.youtube.com/embed/hvSsG3yWrqc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/hvSsG3yWrqc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
+        <div class="img-thumb">
             <p>Use code: <strong>ytfisher</strong> to get <strong>40% off</strong></p>
             <div class="btn-row">
                 <a href="http://bit.ly/2vvz2sA" class="btn">Get Docker in Motion</a>

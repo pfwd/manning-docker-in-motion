@@ -142,6 +142,175 @@ fieldset{
     border:1px solid #85C1E9;
 }
 
+
+
+/* Marketing */
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    overflow:none;
+}
+#overlay-content{
+    width:240px;
+    overflow-y: scroll;
+    padding:10px;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #262626;
+    border:1px solid #F2F2F2;
+    border-radius: 20px;
+    color:#FFF;
+    font-family: "Verdana, Geneva", sans-serif;
+    font-size:1em;
+    line-height:1.2em;
+}
+.hide-mobile{
+    display: none;
+}
+#overlay-content a{
+    text-decoration: none;
+}
+#overlay-content p{
+    margin-top:10px;
+}
+#overlay-content .copy{
+    float:left;
+    width:100%;
+    margin-right:20px;
+    margin-bottom:10px;
+}
+#overlay-content .what-you-will-learn ul{
+    list-style: square;
+    margin-left:10px;
+    padding-left:10px;
+}
+#overlay-content .copy p:first-child{
+    padding-top:0;
+    margin-top:0;
+}
+#overlay-content .img-thumb{
+    float:left;
+    width:100%;
+}
+#overlay-content .img-thumb p{
+    text-align: center;
+}
+#overlay-content .img-thumb strong,
+#marketing-header strong{
+    color:#ffff00;
+}
+#overlay-content .close{
+    float:right;
+    color:#FFF;
+}
+#overlay-content h1{
+    margin:0;
+    font-size:1.1em;
+    line-height:1em;
+}
+#overlay-content h2{
+    font-size:1.1em;
+    line-height:1em;
+}
+#overlay-content .iframe-container{
+    margin-top:10px;
+    margin-bottom: 3px;
+    text-align:center;
+}
+#overlay-content .iframe-container iframe{
+    width:240px;
+    height:135px;
+}
+
+#overlay-content .btn-row{
+    margin-top:20px;
+    width:100%;
+    text-align:center;
+
+}
+#overlay-content .btn,
+#marketing-header .btn{
+    padding:10px;
+    background-color:#47bd30;
+    color:#FFF;
+    border-radius: 6px;
+    font-size:1em;
+    margin-left:auto;
+    margin-right:auto;
+}
+#overlay-content .btn:hover,
+#marketing-header .btn:hover{
+    background-color:#66dd66;
+    color:#000;
+}
+#overlay-content .close{
+    padding:5px;
+    background-color:#6E6E6E;
+    color:#CCC;
+    border-radius: 6px;
+}
+#overlay-content .what-you-will-learn{
+    float:left;
+}
+#overlay-content .close:hover{
+    background-color:#CCC;
+    color:#6E6E6E;
+}
+#marketing-header{
+    width:100%;
+    background-color: #262626;
+    border:1px solid #F2F2F2;
+
+    color:#EAF2F8;
+    float:left;
+    border-bottom:2px solid #CCC;
+    margin-bottom:50px;
+    font-size:1em;
+}
+#marketing-header .marketing-content{
+    padding:10px;
+}
+#marketing-header .copy h2{
+    margin:0;
+    font-size:1.1em;
+}
+#marketing-header .copy{
+    float:left;
+    margin-bottom:10px;
+}
+#marketing-header .btn-row{
+    width:100%;
+    text-align: center;
+    float:left;
+    margin-bottom:10px;
+}
+#marketing-header .btn-row p{
+    margin-top:10px;
+}
+
+#marketing-header .btn{
+    padding:10px;
+    font-size: 1em;
+    width:200px;
+    text-align: center;
+}
+#marketing-header a{
+    color:#FFF;
+    text-decoration: none;
+}
+
+
+
 @media only screen and (min-width:480px) {
     body{
         font-size:18px;
@@ -178,6 +347,13 @@ fieldset{
         margin-right:auto;
         width:1084px;
     }
+    #overlay-content {
+        width: 440px;
+    }
+    #overlay-content .iframe-container iframe{
+        width:332px;
+        height:180px;
+    }
     #main-content{
         margin-left:20px;
     }
@@ -187,145 +363,88 @@ fieldset{
 
 }
 
-/* Marketing */
-#overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
+@media only screen and (min-width:480px) and (max-width: 767px){
+    div#container{
+        float:left;
+    }
 }
-#overlay-content{
-    width:840px;
-    height:480px;
-    padding:20px;
-    margin-top:100px;
-    margin-left:auto;
-    margin-right:auto;
-    background-color: #262626;
-    border:1px solid #F2F2F2;
-    border-radius: 20px;
-    color:#FFF;
-    font-family: "Verdana, Geneva", sans-serif;
-    font-size:1.1em;
-    line-height:1.2em;
-}
-#overlay-content a{
-    text-decoration: none;
-}
-#overlay-content p{
-    margin-top:20px;
-}
-#overlay-content .copy{
-    float:left;
-    width:410px;
-    margin-right:20px;
-}
-#overlay-content .copy ul{
-    list-style: square;
-    margin-left:20px;
-}
-#overlay-content .copy p:first-child{
-    padding-top:0;
-    margin-top:0;
-}
-#overlay-content .img-thumb{
-    float:left;
-    width:410px;
-}
-#overlay-content .img-thumb p{
-    text-align: center;
-    font-size:1.3em;
-}
-#overlay-content .img-thumb strong,
-#marketing-header strong{
-    color:#ffff00;
-}
-#overlay-content .close{
-    float:right;
-    color:#FFF;
-}
-#overlay-content h1{
-    margin:0;
-}
-#overlay-content .iframe-container{
-    margin-top:20px;
-    margin-bottom: 3px;
-}
-#overlay-content .btn-row{
-    margin-top:50px;
-    width:100%;
-    height:100%;
-    text-align:center;
+@media (min-width: 767px) {
 
-}
-#overlay-content .btn,
-#marketing-header .btn{
-    padding:20px;
-    background-color:#47bd30;
-    color:#FFF;
-    border-radius: 6px;
-    font-size:1.22em;
-    width:250px;
-    margin-left:auto;
-    margin-right:auto;
-}
-#overlay-content .btn:hover,
-#marketing-header .btn:hover{
-    background-color:#66dd66;
-    color:#000;
-}
-#overlay-content .close{
-    padding:10px;
-    background-color:#6E6E6E;
-    color:#CCC;
-    border-radius: 6px;
-}
-#overlay-content .close:hover{
-    background-color:#CCC;
-    color:#6E6E6E;
-}
-#marketing-header{
-    width:100%;
-    background-color: #262626;
-    border:1px solid #F2F2F2;
-    padding:10px;
-    color:#EAF2F8;
-    float:left;
-    border-bottom:2px solid #CCC;
-    margin-bottom:50px;
-}
-#marketing-header .copy h2{
-    margin:0;
-    font-size:1.2em;
-}
-#marketing-header .copy{
-    float:left;
-}
-#marketing-header .btn-row{
-    float:right;
-    margin-right:50px;
-    text-align: center;
-}
-#marketing-header .btn-row p{
-    margin-top:20px;
+    .hide-mobile{
+        display:block;
+    }
+    #overlay-content {
+        width: 700px;
+    }
+
+    #overlay-content .iframe-container{
+        width:420px;
+        float:right;
+    }
+    .what-you-will-learn{
+        width:275px;
+    }
+    #overlay-content .iframe-container iframe{
+        width:420px;
+        height:230px;
+    }
+    #marketing-header .btn-row{
+        width:300px;
+        float:right;
+    }
 }
 
-#marketing-header .btn{
-    padding:10px;
-    font-size: 1em;
-    width:200px;
-    float:left;
-    text-align: center;
-    margin-left:20px;
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .hide-mobile{
+        display:block;
+    }
+    #overlay-content {
+        width: 700px;
+    }
+
+    #overlay-content .iframe-container{
+        width:420px;
+        float:right;
+    }
+    .what-you-will-learn{
+        width:275px;
+    }
+    #overlay-content .iframe-container iframe{
+        width:420px;
+        height:230px;
+    }
+    #marketing-header .btn-row{
+        width:300px;
+        float:right;
+    }
+    div#container{
+        float:left;
+    }
 }
-#marketing-header a{
-    color:#FFF;
-    text-decoration: none;
+@media (min-width: 1024px) {
+    .hide-mobile{
+        display:block;
+    }
+    #overlay-content {
+        width: 900px;
+    }
+
+    #overlay-content .iframe-container{
+        width:560px;
+        float:right;
+    }
+    .what-you-will-learn{
+        width:300px;
+    }
+    #overlay-content .iframe-container iframe{
+        width:560px;
+        height:310px;
+    }
+    #marketing-header .btn-row{
+        width:350px;
+        float:right;
+    }
+
 }
