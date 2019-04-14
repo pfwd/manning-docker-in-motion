@@ -5,4 +5,7 @@ LABEL maintainer "Peter Fisher"
 LABEL image_type "MYSQL database server"
 
 # Copy over the schema files
-ADD /schemas /schemas
+COPY /schemas /schemas
+
+# Replace mysql config file with one that includes native password support
+COPY /config/my.cnf /etc/mysql/my.cnf
