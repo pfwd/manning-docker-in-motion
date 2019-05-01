@@ -9,7 +9,7 @@ services:
       - mysql
 
   mysql:
-    build: mysql
+    build: mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD=test
       - MYSQL_DATABASE=docker_in_motion
