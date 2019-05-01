@@ -7,7 +7,7 @@ ENV DOC_ROOT /var/www/mysite-dev
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    && apt-get install -y \
     apache2 \
     libapache2-mod-php \
     php7.0 \
