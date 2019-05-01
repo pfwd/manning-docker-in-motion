@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  apache:
+    build: apache
+    ports:
+      - 8080:80
+    links:
+      - mysql
+
+  mysql:
+    build: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=docker_in_motion
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:

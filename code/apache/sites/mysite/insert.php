@@ -4,6 +4,7 @@ require_once 'config/dbConnect.php';
 require_once 'model/Person.php';
 require_once 'modelRepo/personRepo.php';
 
+$showMarketing = getenv('marketing');
 
 $errors = [];
 if(isset($_POST['submit'])){
@@ -55,9 +56,15 @@ if(isset($_POST['submit'])){
 <html>
 <head>
     <title>Docker In Motion - Peter Fisher | List of records</title>
+    <?php require_once 'templates/meta/meta.php'; ?>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+<?php
+if ($showMarketing):
+    require_once 'templates/marketing/header.php';
+endif;
+?>
 <div id="container">
     <header id="container-head">
         <h1>Docker In Motion</h1>
